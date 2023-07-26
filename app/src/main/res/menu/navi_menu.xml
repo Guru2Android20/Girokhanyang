@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--하단 네비게이션 바-->
+
+    <item
+        android:id="@+id/mainFragment"
+        android:title="메인"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:title="캘린더"
+        android:icon="@drawable/ic_calendar"/>
+
+    <item
+        android:id="@+id/writingFragment"
+        android:title="작성"
+        android:icon="@drawable/ic_writing"/>
+
+    <item
+        android:id="@+id/chartFragment"
+        android:title="차트"
+        android:icon="@drawable/ic_chart"/>
+
+    <item
+        android:id="@+id/myPageFragment"
+        android:title="마이페이지"
+        android:icon="@drawable/ic_user"/>
+
+</menu>
