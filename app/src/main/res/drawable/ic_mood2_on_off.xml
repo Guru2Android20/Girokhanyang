@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--버튼 클릭 시 이미지-->
+    <item
+        android:drawable="@drawable/ic_mood2"
+        android:state_pressed="true"></item>
+
+    <!--버튼 기본 이미지-->
+    <item
+        android:drawable="@drawable/ic_mood2_unselected"
+        android:state_pressed="false"></item>
+
+</selector>

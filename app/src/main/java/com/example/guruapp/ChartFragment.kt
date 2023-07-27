@@ -1,10 +1,21 @@
 package com.example.guruapp
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
+import lecho.lib.hellocharts.model.Axis
+import lecho.lib.hellocharts.model.AxisValue
+import lecho.lib.hellocharts.model.Line
+import lecho.lib.hellocharts.model.LineChartData
+import lecho.lib.hellocharts.model.PointValue
+import lecho.lib.hellocharts.util.ChartUtils
+import lecho.lib.hellocharts.view.LineChartView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,13 +40,57 @@ class ChartFragment : Fragment() {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chart, container, false)
+        return inflater.inflate(com.example.guruapp.R.layout.fragment_chart, container, false)
     }
+
+    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val lineChartView = view.findViewById<LineChartView>(R.id.chart)
+
+        val values = ArrayList<PointValue>()
+        values.add(PointValue(0f, 10f))
+        values.add(PointValue(1f, 20f))
+        values.add(PointValue(2f, 15f))
+        values.add(PointValue(3f, 25f))
+        // ... 이하 추가 데이터를 원하는 만큼 추가합니다.
+
+        val line = Line(values).apply {
+            color = ChartUtils.COLOR_BLUE // 그래프 색상 설정
+            isCubic = true
+        }
+
+        val lines = ArrayList<Line>()
+        lines.add(line)
+
+        val data = LineChartData(lines)
+
+        val axisX = Axis()
+        val axisY = Axis()
+
+        val axisValues = ArrayList<AxisValue>()
+        axisValues.add(AxisValue(0f).setLabel("0일"))
+        axisValues.add(AxisValue(1f).setLabel("1일"))
+        axisValues.add(AxisValue(2f).setLabel("2일"))
+        axisValues.add(AxisValue(3f).setLabel("3일"))
+        // ... 이하 추가 레이블을 원하는 만큼 추가합니다.
+
+        axisX.values = axisValues
+        axisX.name = "X 축 레이블" // X 축 레이블 설정
+        axisY.name = "Y 축 레이블" // Y 축 레이블 설정
+
+        data.axisXBottom = axisX
+        data.axisYLeft = axisY
+
+        lineChartView.lineChartData = data
+    }*/
 
     companion object {
         /**

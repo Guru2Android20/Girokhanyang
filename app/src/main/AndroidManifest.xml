@@ -13,6 +13,14 @@
         android:theme="@style/Theme.GuruApp"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePwActivity"
+            android:parentActivityName=".NaviActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangeNameActivity"
+            android:parentActivityName=".NaviActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
